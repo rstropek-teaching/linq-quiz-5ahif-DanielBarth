@@ -1,0 +1,9 @@
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\obj\Debug\netcoreapp2.0\LinqQuiz.Library.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\obj\Debug\netcoreapp2.0\LinqQuiz.Library.AssemblyInfoInputs.cache
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\obj\Debug\netcoreapp2.0\LinqQuiz.Library.AssemblyInfo.cs
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\bin\Debug\netcoreapp2.0\LinqQuiz.Library.deps.json
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\bin\Debug\netcoreapp2.0\LinqQuiz.Library.dll
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\bin\Debug\netcoreapp2.0\LinqQuiz.Library.pdb
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\obj\Debug\netcoreapp2.0\LinqQuiz.Library.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\obj\Debug\netcoreapp2.0\LinqQuiz.Library.dll
+C:\Users\Daniel Barth\Documents\HTL-Perg\5AHIF\POSE\C#\GithubKlone\LinqQuiz.Library\obj\Debug\netcoreapp2.0\LinqQuiz.Library.pdb

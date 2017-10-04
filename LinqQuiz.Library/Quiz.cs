@@ -16,7 +16,7 @@ namespace LinqQuiz.Library
         /// </exception>
         public static int[] GetEvenNumbers(int exclusiveUpperLimit)
         {
-            throw new NotImplementedException();
+            return (from num in (Enumerable.Range(1, exclusiveUpperLimit - 1)) where (num % 2) == 0 select num).ToArray();
         }
 
         /// <summary>
@@ -33,7 +33,15 @@ namespace LinqQuiz.Library
         /// </remarks>
         public static int[] GetSquares(int exclusiveUpperLimit)
         {
-            throw new NotImplementedException();
+            if (exclusiveUpperLimit < 1)
+            {
+                return new int[0];
+            }
+            else
+            {
+                return checked(from num in (Enumerable.Range(1, exclusiveUpperLimit - 1)) where (num % 7) == 0 orderby num descending select (num * num)).ToArray();
+                
+            }
         }
 
         /// <summary>
@@ -52,7 +60,40 @@ namespace LinqQuiz.Library
         /// </remarks>
         public static FamilySummary[] GetFamilyStatistic(IReadOnlyCollection<IFamily> families)
         {
-            throw new NotImplementedException();
+            int familyId;
+            int numberOfFamilyMembers;
+            decimal averageAge;
+
+            int sum;
+
+            if (families == null)
+                throw new ArgumentNullException();
+
+            List<FamilySummary> summaries = new List<FamilySummary>();
+
+            foreach (IFamily family in families)
+            {
+                sum = 0;
+                numberOfFamilyMembers = 0;
+                averageAge = 0;
+
+                foreach (IPerson person in family.Persons)
+                    sum += (int)person.Age;
+
+                familyId = family.ID;
+                numberOfFamilyMembers = family.Persons.Count;
+                if (numberOfFamilyMembers != 0)
+                    averageAge = (decimal)sum / numberOfFamilyMembers;
+
+                FamilySummary summary = new FamilySummary();
+                summary.FamilyID = familyId;
+                summary.NumberOfFamilyMembers = numberOfFamilyMembers;
+                summary.AverageAge = averageAge;
+
+                summaries.Add(summary);
+            }
+
+            return summaries.ToArray();
         }
 
         /// <summary>
@@ -70,7 +111,28 @@ namespace LinqQuiz.Library
         /// </remarks>
         public static (char letter, int numberOfOccurrences)[] GetLetterStatistic(string text)
         {
-            throw new NotImplementedException();
+            char firstLetter = 'A';
+            char lastlLetter = 'Z';
+
+            int count;
+
+            List<(char letter, int numberOfOccurances)> list = new List<(char letter, int numberOfOccurances)>();
+
+            for (int i = firstLetter; i <= lastlLetter; i++)
+            {
+                count = 0;
+
+                for (int j = 0; j < text.Length; j++)
+                {
+                    if (i == (char)text[j])
+                        count++;
+                }
+
+                if (count != 0)
+                    list.Add(((char)i, count));
+            }
+
+            return list.ToArray();
         }
     }
 }
